@@ -33,26 +33,8 @@ export default function Home() {
 	};
 
 	const onImportClick = async () => {
-		console.log("onImportClick ");
+		console.log(file.fileUrl);
 		const resume = await parseResumeFromPdf(file.fileUrl);
-		console.log(resume, "Finally....");
-		// const settings = deepClone(initialSettings);
-		// // Set formToShow settings based on uploaded resume if users have used the app before
-		// if (getHasUsedAppBefore()) {
-		// 	const sections = Object.keys(settings.formToShow) as ShowForm[];
-		// 	const sectionToFormToShow: Record<ShowForm, boolean> = {
-		// 		workExperiences: resume.workExperiences.length > 0,
-		// 		educations: resume.educations.length > 0,
-		// 		projects: resume.projects.length > 0,
-		// 		skills: resume.skills.descriptions.length > 0,
-		// 		custom: resume.custom.descriptions.length > 0,
-		// 	};
-		// 	for (const section of sections) {
-		// 		settings.formToShow[section] = sectionToFormToShow[section];
-		// 	}
-		// }
-		// saveStateToLocalStorage({ resume, settings });
-		// router.push("/resume-builder");
 	};
 	return (
 		<div className="flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 py-12">
